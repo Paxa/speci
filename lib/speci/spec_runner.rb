@@ -9,19 +9,19 @@ module Speci
     ensure
       reset
     end
-  end
 
-  def preload_spec_helper
-    spec_helper_location = File.join(Speci.root_path, 'spec/spec_helper.rb')
-    unless $LOADED_FEATURES.include?(spec_helper_location)
-      require spec_helper_location
+    def preload_spec_helper
+      spec_helper_location = File.join(Speci.root_path, 'spec/spec_helper.rb')
+      unless $LOADED_FEATURES.include?(spec_helper_location)
+        require spec_helper_location
+      end
     end
-  end
 
-  def reset
-    conf = RSpec::configuration
-    conf.reset
-    RSpec.reset
-    RSpec::configuration = conf
+    def reset
+      conf = RSpec::configuration
+      conf.reset
+      RSpec.reset
+      RSpec::configuration = conf
+    end
   end
 end

@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["pavel.evst@gmail.com"]
   gem.description   = gem.summary = "Continiusly rspec runner"
   #gem.homepage      = "http://"
-  gem.license       = "LGPL-3.0"
+  gem.license       = "MIT"
 
   gem.executables   = ['speci']
   gem.files         = `git ls-files | grep -Ev '^(myapp|examples)'`.split("\n")
@@ -13,7 +13,10 @@ Gem::Specification.new do |gem|
   gem.name          = "speci"
   gem.require_paths = ["lib"]
   gem.version       = Speci::VERSION
+
   gem.add_dependency 'listen', "~> 1.3.0"
   gem.add_dependency 'rb-fsevent', "~> 0.9.3"
-  gem.add_dependency 'rb-readline', "~> 0.5.0"
+  gem.add_dependency 'ripl', "~> 0.7"
+  gem.add_dependency 'looksee', "~> 1.1.0"
+  #gem.add_dependency 'rb-readline', "~> 0.5.0"
 end
