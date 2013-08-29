@@ -4,7 +4,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Pavel Evstigneev"]
   gem.email         = ["pavel.evst@gmail.com"]
   gem.description   = gem.summary = "Continiusly rspec runner"
-  #gem.homepage      = "http://"
+  gem.homepage      = "http://github.com/Paxa/speci"
   gem.license       = "MIT"
 
   gem.executables   = ['speci']

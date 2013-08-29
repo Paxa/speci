@@ -1,6 +1,6 @@
 # Speci
 
-It's a continuously turbo-fast rspec runner with IRB-like console.
+It's a turbo-fast continuously rspec runner with IRB-like console.
 
 ## Install
 
