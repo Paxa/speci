@@ -14,7 +14,7 @@ module Speci
         begin
           files.delete_if {|file| file == __FILE__ }
           files.each do |file|
-            file = file.sub(Speci.root_path, '')
+            file = file.sub(Speci.root_path + '/', '')
             if file == "spec/spec_helper.rb"
               puts "Force reload #{file}"
               Speci.restart!
@@ -25,7 +25,6 @@ module Speci
 
           puts "Files changed #{files.inspect}"
 
-          Speci.reload_rails
           if files.select {|f| !f.start_with?('spec/') }.size > 0
             Speci.reload_rails!
           end
